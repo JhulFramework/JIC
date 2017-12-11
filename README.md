@@ -1,5 +1,5 @@
-### Codeignitor Application Installer
- - Web UI to facilitate Codeignitor app installation
+### Codeigniter Application Installer
+ - Web UI to facilitate codeigniter app installation
 
 ### Requirement
 - PHP Version >= 5.6
@@ -30,7 +30,7 @@ $config['encryption_key'] = \JI::I()->config('encryption_key');
 
 ```
 
-- Move Your Codeignitor application directory and codeignitor system directory inside /path/to/jic/codeignitor/
+- Move Your codeigniter application directory and codeigniter system directory inside /path/to/jic/codeigniter/
 
 
 ### Installation ( advanced )
@@ -39,7 +39,7 @@ $config['encryption_key'] = \JI::I()->config('encryption_key');
 
 - you only need "jic" folder, you can delete "public_html" and  "jic/codeigniter" directory
 
-- EDIT your codeignitor config/config.php and change respective lines to
+- EDIT your codeigniter config/config.php and change respective lines to
 
 ```php
 
@@ -49,7 +49,7 @@ $config['encryption_key'] = \JI::I()->config('encryption_key');
 
 ```
 
-- EDIT your codeignitor config/database.php and change respective lines to
+- EDIT your codeigniter config/database.php and change respective lines to
 
 ```php
 
