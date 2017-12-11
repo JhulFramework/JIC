@@ -32,6 +32,8 @@ class JI
 
 	private $_ifJhulStarted = FALSE;
 
+	private $_autoInstall = FALSE;
+
 	private $_publicRoot ;
 
 	/*
@@ -47,6 +49,18 @@ class JI
 		$this->_envKey 		= $environmentKey;
 		$this->_publicRoot 	= $public_root ;
 		$this->_component_map 	= require( __DIR__.'/_components.php' );
+	}
+
+
+	public function setAutoInstall( $bool )
+	{
+		$this->_autoInstall = $bool;
+		return $this ;
+	}
+
+	public function ifAutoInstall()
+	{
+		return TRUE == $this->_autoInstall ;
 	}
 
 	public function componentMap()
@@ -136,7 +150,7 @@ class JI
 		return $this->_publicRoot ;
 	}
 
-	public static function run( $public_root, $envKey )
+	public static function run( $public_root, $envKey, $autoInstall = FALSE )
 	{
 		static::create($public_root, $envKey);
 
@@ -144,6 +158,12 @@ class JI
 		{
 			if( !static::$I->isConfigured($key) )
 			{
+				if( !$autoInstall )
+				{
+					echo 'App Not Installed';
+					exit;
+				}
+
 				static::$I->startJHUL();
 
 				$component = new $class( $key );
@@ -180,8 +200,17 @@ class JI
 		return $this->_store ;
 	}
 
+	private $_baseURL;
+
 	public function autoBaseURL()
 	{
-		return trim( $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], '/') ;
+		if(empty($this->_baseURL))
+		{
+
+			$url = pathinfo( trim( $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], '/') ) ;
+			$this->_baseURL = $url['dirname'];
+		}
+
+		return $this->_baseURL ;
 	}
 }

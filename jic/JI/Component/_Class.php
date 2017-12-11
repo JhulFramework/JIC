@@ -49,7 +49,7 @@ abstract class _Class
 			\JI::I()->setConfiguredStatus( $this->key() , TRUE );
 			\JI::I()->commit();
 
-			header( 'Location: '.\JI::I()->autoBaseURL() );
+			header( 'Location: '.trim( $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], '/') );
 			exit();
 
 		}

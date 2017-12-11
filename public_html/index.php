@@ -2,7 +2,7 @@
 
 require( dirname( __DIR__ ).'/jic/include_me.php');
 
-\JI::run( __DIR__, 'test' );
+\JI::run( __DIR__, 'test', TRUE );
 
 
 /**

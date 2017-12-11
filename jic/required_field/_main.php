@@ -5,7 +5,7 @@
 		'label' 	=> 'Base URL',
 		'view_type' => 'editText',
 		'data_type' => 'string',
-		'default'	=>  trim( $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], '/'),
+		'default'	=> \JI::I()->autoBaseURL(),
 	],
 
 	'encryption_key' =>
