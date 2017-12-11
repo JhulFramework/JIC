@@ -1,0 +1,10 @@
+.UP{ min-height:100px; line-height:100px;  }
+.UP .A{ text-align:center; padding: 30px 0; width:100%; max-width: 300px;  }
+.UP .T
+{
+	line-height:16px;  padding-top:30px; padding-bottom: 30px; text-align: center; width: 100%;
+	text-shadow:0px 0px 16px rgba(50, 50, 50, 1);
+}
+.UP .TC{ max-width: 600px; }
+
+.avatar{min-width:120px;  border-radius: 50% ; }

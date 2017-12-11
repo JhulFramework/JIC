@@ -1,0 +1,17 @@
+{
+    "config": {
+        "main": {
+            "base_url": "http:\/\/syahi.me.beta\/ci\/public_html",
+            "encryption_key": "11111111",
+            "name": "ci",
+            "host": "localhost",
+            "username": "root",
+            "password": "sqlMy",
+            "prefix": ""
+        }
+    },
+    "configured_status": {
+        "main": true,
+        "db": true
+    }
+}
