@@ -6,6 +6,7 @@
 ### Requirement
 
  - PHP Version >= 5.6
+ - jic/\_data directory mut be writable
 
 
 ### Installation ( as it is )
@@ -63,5 +64,4 @@ $env = 'prod' // enivoronment name, just a unique key to keep configuration sepe
 now you can access your url
 
 ### NOTE
- - before passing code to client or if you want to reinstall, delete content of directory jic/_data
- 
+ - before passing code to client or if you want to reinstall, delete content of directory jic/\_data
