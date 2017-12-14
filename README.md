@@ -6,7 +6,7 @@
 ### Requirement
 
  - PHP Version >= 5.6
- - jic/\_data directory mut be writable
+ - jic/\_data directory mut be writable by PHP
 
 
 ### Installation ( as it is )
@@ -15,9 +15,9 @@
 
  - Clone or download this repository
 
- - codeigniter application foder is  jic/codeigniter/application
+ - Codeigniter *application* folder is  jic/codeigniter/application
 
- - codeigniter system folder is jic/codeigniter/system
+ - Codeigniter *system* folder is jic/codeigniter/system
 
 
 ### Installation ( advanced )
