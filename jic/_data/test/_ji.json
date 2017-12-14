@@ -1,0 +1,11 @@
+{
+    "config": {
+        "main": {
+            "base_url": "http:\/\/www.syahi.me.beta\/ci",
+            "encryption_key": "11111111"
+        }
+    },
+    "configured_status": {
+        "main": true
+    }
+}

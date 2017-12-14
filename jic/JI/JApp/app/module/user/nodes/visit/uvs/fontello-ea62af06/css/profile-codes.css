@@ -1,5 +1,0 @@
-@charset "UTF-8";
-
- 
-.icon-quote-left:before { content: '󨀡'; } /* '\e8021' */
-.icon-quote-right:before { content: '󨀢'; } /* '\e8022' */

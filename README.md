@@ -1,36 +1,22 @@
 ### Codeigniter Application Installer
+
  - Web UI to facilitate codeigniter app installation
 
+
 ### Requirement
-- PHP Version >= 5.6
+
+ - PHP Version >= 5.6
+
 
 ### Installation ( as it is )
 
+ - CI 3.1.6 is included with it and is configured
+
  - Clone or download this repository
 
- - EDIT your application/config/config.php and change respective lines to
+ - codeigniter application foder is  jic/codeigniter/application
 
-```php
-
-$config['base_url'] = \JI::I()->config('base_url');
-
-$config['encryption_key'] = \JI::I()->config('encryption_key');
-
-```
-
-- EDIT your application/config/database.php and change respective lines to
-
-```php
-
-'hostname' => \JI::I()->config('db.host'),
-'username' => \JI::I()->config('db.username') ,
-'password' => \JI::I()->config('db.password'),
-'database' => \JI::I()->config('db.name'),
-'dbprefix' => \JI::I()->config('db.prefix'),
-
-```
-
-- Move Your codeigniter application directory and codeigniter system directory inside /path/to/jic/codeigniter/
+ - codeigniter system folder is jic/codeigniter/system
 
 
 ### Installation ( advanced )
@@ -67,28 +53,15 @@ $config['encryption_key'] = \JI::I()->config('encryption_key');
 
 require( '/path/jic/include_me.php');
 
-$env = 'prod' // enivoreonmnet name, just a unique key to keep configuration seperate
+$env = 'prod' // enivoronment name, just a unique key to keep configuration seperate
 
 // passing third parameter true will auto run installation if not installed already
 \JI::run( __DIR__, $env, TRUE );
 
-// if you dont want to run auto installation use
-\JI::run( __DIR__, $env );
-
-
 ```
 
-Creating seperate installation file
-example install.php
+now you can access your url
 
-```php
-
-require( '/path/jic/include_me.php');
-
-$env = 'prod' // enivoreonmnet name, just a unique key to keep configuration seperate
-
-\JI::run( __DIR__, $env, TRUE );
-
-```
-
-delete install.php after installation
+### NOTE
+ - before passing code to client or if you want to reinstall, delete content of directory jic/_data
+ 

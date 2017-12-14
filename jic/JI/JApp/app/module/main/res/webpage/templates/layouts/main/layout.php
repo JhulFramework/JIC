@@ -27,7 +27,7 @@
 		</div>
 
 		<div class="_footer">
-		<?= $body->get('footer') ; ?>
+	
 		</div>
 	</div>
 	<?= $body->script() ; ?>
