@@ -207,8 +207,16 @@ class JI
 		if(empty($this->_baseURL))
 		{
 
-			$url = pathinfo( trim( $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], '/') ) ;
-			$this->_baseURL = $url['dirname'];
+			$url = trim( $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], '/')  ;
+
+
+			if( strrpos($url, '.php') )
+			{
+				$url = pathinfo($url);
+				$url = $url['dirname'];
+			}
+
+			$this->_baseURL = $url;
 		}
 
 		return $this->_baseURL ;

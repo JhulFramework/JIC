@@ -6,7 +6,7 @@
 ### Requirement
 
  - PHP Version >= 5.6
- - jic/\_data directory mut be writable by PHP
+ - jic/\_data directory must be writable by PHP
 
 
 ### Installation ( as it is )
@@ -39,29 +39,25 @@ $config['encryption_key'] = \JI::I()->config('encryption_key');
 - EDIT your codeigniter config/database.php and change respective lines to
 
 ```php
-
 'hostname' => \JI::I()->config('db.host'),
 'username' => \JI::I()->config('db.username') ,
 'password' => \JI::I()->config('db.password'),
 'database' => \JI::I()->config('db.name'),
 'dbprefix' => \JI::I()->config('db.prefix'),
-
 ```
 
 - in your public root index.php, add follwing lines to the top
 
 ```php
-
 require( '/path/jic/include_me.php');
 
 $env = 'prod' // enivoronment name, just a unique key to keep configuration seperate
 
 // passing third parameter true will auto run installation if not installed already
 \JI::run( __DIR__, $env, TRUE );
-
 ```
 
-now you can access your url
+Now you can access your url
 
 ### NOTE
- - before passing code to client or if you want to reinstall, delete content of directory jic/\_data
+ - Before passing code to client OR if you want to reinstall, delete content of directory jic/\_data
