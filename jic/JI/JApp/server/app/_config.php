@@ -7,7 +7,7 @@
 
 	'public_image_directory'	=> 'icons',
 
-	'name'		=> 'Jhul Web App Installer',
+	'name'		=> 'Codeigniter Application Installer',
 
 	'charSet'		=> 'utf-8',
 
