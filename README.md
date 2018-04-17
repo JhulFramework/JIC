@@ -1,6 +1,6 @@
-### Codeigniter Application Installer
+### Codeigniter GUI Installer
 
- - Web UI to facilitate codeigniter app installation
+ -  GUI to facilitate codeigniter app installation
 
 
 ### Requirement
